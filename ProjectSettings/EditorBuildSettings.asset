@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Candle.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/AllPlayerCandlesScene.unity
+    guid: ab2f27d28e841a74cb83e9c06bf409b7
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
