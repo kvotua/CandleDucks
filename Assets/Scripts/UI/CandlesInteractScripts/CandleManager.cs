@@ -22,6 +22,11 @@ public class CandleManager : MonoBehaviour
         Invoke("SendCandleIsSelectedActivator", 0.5f);
     }
 
+    private void OnDestroy()
+    {
+        CandlesSlider.OnCandleIsSelected -= SelectCandle;
+    }
+
     private void SendCandleIsSelectedActivator() => SendCandleIsSelected(currentCandle);
     public static void SendCandleIsSelected(CandleInfo candleInfo)//
     {

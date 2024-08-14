@@ -9,6 +9,7 @@ public class DataBaseCandles : MonoBehaviour
 
     private void Awake()
     {
+        UIOnAllCandlesScene.OnExitAllCandlesScene += SaveCandlesData;
         DragCandle.OnCandleIsActivate += AddFullCandle;
     }
     private void Start()
@@ -18,11 +19,11 @@ public class DataBaseCandles : MonoBehaviour
 
     private void OnDestroy()
     {
+        UIOnAllCandlesScene.OnExitAllCandlesScene -= SaveCandlesData;
         DragCandle.OnCandleIsActivate -= AddFullCandle;
     }
     private void LoadAllCandlesFromDataBase()
     {
-        //создать ещё класс с айди и оставшемся временем горения свечки
         //загрузка всех свечей с какой либо бд
         AddCandlesToScreen();
     }
@@ -48,6 +49,6 @@ public class DataBaseCandles : MonoBehaviour
 
     public void SaveCandlesData()
     {
-
+        //сохрарнить результат на сервер
     }
 }
