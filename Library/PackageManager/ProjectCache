@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638597757840969887
-    m_Hash: 15984177
+      ticks: 638597785329544733
+    m_Hash: 4215889337
   m_LockFileStatus:
     m_FilePath: C:/Users/User/Downloads/CastleGameGit/CandleDucks/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638597758048433777
-    m_Hash: 1498172067
+      ticks: 638597785329576194
+    m_Hash: 599627193
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -183,7 +183,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: 
   description: "Connect your game to the Unity Ads Network for iOS and Android to
     quickly and effectively monetize your games.\n\nNOTE: Unity has joined forces
     with ironSource and recommends using Unity LevelPlay for ad mediation (instead
@@ -292,10 +292,9 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"gameService":{"groupIndex":4,"groupName":"Monetization","genericDashboardUrl":"https://unityads.unity3d.com/help/index","projectDashboardUrl":"https://dashboard.unity3d.com/organizations/{0}/projects/{1}/monetization/about","projectDashboardUrlType":"OrganizationKeyAndProjectGuid","configurePath":"Project/Services/Ads"},"supportedPlatforms":["Android","iOS"],"changelog":"##
-    **Unity**\n - Remove redirect pop-ups directing users to Unity Mediation.\n##
-    **Android**\n### **Bugfix**\n- Fixed a NullPointerException when Application
-    Context is null for cached directory file path."}'
+  upmReserved: '{"changelog":"## **Unity**\n - Remove redirect pop-ups directing
+    users to Unity Mediation.\n## **Android**\n### **Bugfix**\n- Fixed a NullPointerException
+    when Application Context is null for cached directory file path.","gameService":{"groupName":"Monetization","groupIndex":4,"configurePath":"Project/Services/Ads","genericDashboardUrl":"https://unityads.unity3d.com/help/index","projectDashboardUrl":"https://dashboard.unity3d.com/organizations/{0}/projects/{1}/monetization/about","projectDashboardUrlType":"OrganizationKeyAndProjectGuid"},"supportedPlatforms":["Android","iOS"]}'
   assetStore:
     productId: 
 - packageId: com.unity.ai.navigation@2.0.0
@@ -312,7 +311,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: High-level NavMesh components for building and using NavMeshes at
     runtime and at edit time.
   errors: []
@@ -400,32 +399,69 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
+    - 0.0.3
+    - 0.0.4
+    - 0.0.5
+    - 0.0.7
+    - 0.0.8
+    - 0.0.9
+    - 0.0.10
+    - 0.0.11
+    - 0.0.12
+    - 0.0.13
+    - 0.0.14
+    - 0.0.15
+    - 0.0.16
+    - 0.0.17
+    - 0.0.19
+    - 2.0.5
+    - 2.0.11
+    - 2.0.13
+    - 2.0.14
+    - 2.0.15
+    - 2.0.16
+    - 3.0.5
+    - 3.0.9
+    - 3.1.1
+    - 3.2.0
+    - 3.2.2
+    - 3.2.3
+    - 3.3.0
+    - 3.3.2-preview
+    - 3.3.2
+    - 3.3.4
+    - 3.3.5
+    - 3.4.0
+    - 3.5.3
+    - 3.6.11
+    - 3.6.12
+    - 3.7.1
     - 3.8.1
     compatible:
     - 3.8.1
     recommended: 3.8.1
     deprecated: []
   dependencies:
-  - name: com.unity.services.analytics
-    version: 1.0.4
   - name: com.unity.ugui
     version: 1.0.0
-  resolvedDependencies:
   - name: com.unity.services.analytics
-    version: 4.4.0
+    version: 1.0.4
+  resolvedDependencies:
   - name: com.unity.ugui
     version: 2.0.0
   - name: com.unity.modules.ui
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
+  - name: com.unity.services.analytics
+    version: 4.4.0
   - name: com.unity.services.core
     version: 1.12.2
-  - name: com.unity.modules.unitywebrequest
+  - name: com.unity.modules.androidjni
     version: 1.0.0
   - name: com.unity.nuget.newtonsoft-json
     version: 3.2.1
-  - name: com.unity.modules.androidjni
+  - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   keywords:
   - analytics
@@ -440,9 +476,9 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   entitlements:
-    licensingModel: 0
+    licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 0
+  datePublishedTicks: 637789683740000000
   documentationUrl: 
   hasRepository: 1
   repository:
@@ -642,7 +678,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: The JetBrains Rider Editor package provides an integration for using
     the JetBrains Rider IDE as a code editor for Unity. It adds support for generating
     .csproj files for code completion and auto-discovery of installations.
@@ -843,6 +879,115 @@ m_ResolvedPackages:
     Prevent circular dependency errors with SDK-Style projects."}'
   assetStore:
     productId: 
+- packageId: com.unity.postprocessing@3.4.0
+  testable: 0
+  isDirectDependency: 1
+  version: 3.4.0
+  source: 1
+  resolvedPath: C:\Users\User\Downloads\CastleGameGit\CandleDucks\Library\PackageCache\com.unity.postprocessing@3.4.0
+  assetPath: Packages/com.unity.postprocessing
+  name: com.unity.postprocessing
+  displayName: Post Processing
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: The post-processing stack (v2) comes with a collection of effects
+    and image filters you can apply to your cameras to improve the visuals of your
+    games.
+  errors: []
+  versions:
+    all:
+    - 0.1.7
+    - 0.1.8
+    - 2.0.0-beta
+    - 2.0.1-beta
+    - 2.0.2-preview
+    - 2.0.3-preview
+    - 2.0.5-preview
+    - 2.0.7-preview
+    - 2.0.8-preview
+    - 2.0.9-preview
+    - 2.0.10-preview
+    - 2.0.11-preview
+    - 2.0.12-preview
+    - 2.0.13-preview
+    - 2.0.14-preview
+    - 2.0.15-preview
+    - 2.0.16-preview
+    - 2.0.17-preview
+    - 2.1.0
+    - 2.1.1
+    - 2.1.2
+    - 2.1.3
+    - 2.1.4
+    - 2.1.5
+    - 2.1.6
+    - 2.1.7
+    - 2.2.1
+    - 2.2.2
+    - 2.3.0
+    - 3.0.1
+    - 3.0.3
+    - 3.1.0
+    - 3.1.1
+    - 3.2.0
+    - 3.2.1
+    - 3.2.2
+    - 3.3.0
+    - 3.4.0
+    compatible:
+    - 3.4.0
+    recommended: 3.4.0
+    deprecated: []
+  dependencies:
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.physics
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638384897060000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.postprocessing@3.4/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/Graphics.git
+    revision: 54427d2529ad1a9e8f31c693d751c6371f914e40
+    path: 
+  unityLifecycle:
+    version: 3.4.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Added\n- Added WebGPU support\n\n### Fixed\n- Fixed
+    obsolete FormatUsage error\n- Fixed non-scalar logical operation error\n- Fixed
+    MSVO to support platforms with limited storage texture support\n- Fixed compute
+    based effects not supported on WebGL and Android OpenGL (IN-2999)\n- Fixed grid
+    gizmo is visible through geometry when Post Process Layer is enabled (IN-10318)\n-
+    Fixed transparent objects rendering incorrectly when TAA is disabled (IN-31494)"}'
+  assetStore:
+    productId: 
 - packageId: com.unity.purchasing@4.10.0
   testable: 0
   isDirectDependency: 1
@@ -857,7 +1002,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: "IMPORTANT UPGRADE NOTES:\n\nIf updating from Unity IAP (com.unity.purchasing
     + the Asset Store plugin) versions 2.x to version 3.x, complete the following
     actions in order to resolve compilation errors:\n 1. Move IAPProductCatalog.json
@@ -947,6 +1092,7 @@ m_ResolvedPackages:
     - 4.12.1-pre.4
     - 4.12.1
     - 4.12.2
+    - 5.0.0-pre.1
     compatible:
     - 4.10.0
     - 4.11.0
@@ -956,19 +1102,20 @@ m_ResolvedPackages:
     - 4.12.1-pre.4
     - 4.12.1
     - 4.12.2
+    - 5.0.0-pre.1
     recommended: 4.10.0
     deprecated: []
   dependencies:
   - name: com.unity.ugui
     version: 1.0.0
-  - name: com.unity.modules.unitywebrequest
+  - name: com.unity.services.core
+    version: 1.8.2
+  - name: com.unity.modules.androidjni
     version: 1.0.0
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
-  - name: com.unity.modules.androidjni
+  - name: com.unity.modules.unitywebrequest
     version: 1.0.0
-  - name: com.unity.services.core
-    version: 1.8.2
   resolvedDependencies:
   - name: com.unity.ugui
     version: 2.0.0
@@ -976,16 +1123,16 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.modules.imgui
     version: 1.0.0
+  - name: com.unity.services.core
+    version: 1.12.2
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
-  - name: com.unity.modules.androidjni
-    version: 1.0.0
-  - name: com.unity.services.core
-    version: 1.12.2
-  - name: com.unity.nuget.newtonsoft-json
-    version: 3.2.1
   keywords:
   - purchasing
   - iap
@@ -1021,22 +1168,20 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"gameService":{"groupIndex":4,"groupName":"Monetize","configurePath":"Project/Services/In-App
-    Purchasing","genericDashboardUrl":"https://dashboard.unity3d.com/","projectDashboardUrl":"https://dashboard.unity3d.com/organizations/{0}/projects/{1}/analytics/v2/dashboards/revenue","projectDashboardUrlType":"OrganizationKeyAndProjectGuid"},"supportedPlatforms":["Android","iOS"],"changelog":"###
-    Changed\n- Unity Distribution Portal - IAP will retract support for UDP at some
-    point in the near future (Announcement TBD). Until then, all UDP features will
-    continue to function, but the public interfaces, as well as some private functions
-    are now marked `[Obsolete]`. In the next major update these will all be removed
-    and UDP will cease to function with that version of In-App Purchasing and those
-    that follow.\n- Unity Distribution Portal - If the editor is unable to connect
-    to the UDP backend, the developer can now use some UDP catalog features in offline
-    mode. This allows the developer to continue to enter prices, meaning that prices
-    will need to be synced manually. In this case, we strongly suggest you sync your
-    prices properly once connection is re-established. A warning message will display
-    in the Catalog if the editor is unable to connect to the UDP backend.\n- Analytics
-    - The Legacy Analytics built-in module, com.unity.modules.unityanalytics, is
-    now no longer a dependency. You may not remove it from your project if you don''t
-    use it. Make sure it is in your project if you do use it.\n- Project Settings
+  upmReserved: '{"changelog":"### Changed\n- Unity Distribution Portal - IAP will
+    retract support for UDP at some point in the near future (Announcement TBD).
+    Until then, all UDP features will continue to function, but the public interfaces,
+    as well as some private functions are now marked `[Obsolete]`. In the next major
+    update these will all be removed and UDP will cease to function with that version
+    of In-App Purchasing and those that follow.\n- Unity Distribution Portal - If
+    the editor is unable to connect to the UDP backend, the developer can now use
+    some UDP catalog features in offline mode. This allows the developer to continue
+    to enter prices, meaning that prices will need to be synced manually. In this
+    case, we strongly suggest you sync your prices properly once connection is re-established.
+    A warning message will display in the Catalog if the editor is unable to connect
+    to the UDP backend.\n- Analytics - The Legacy Analytics built-in module, com.unity.modules.unityanalytics,
+    is now no longer a dependency. You may not remove it from your project if you
+    don''t use it. Make sure it is in your project if you do use it.\n- Project Settings
     - In the Services Project Settings page of the Editor, we have changed the endpoint
     from which the Google Play Key is obtained. Also, instead of setting the key
     directly in the editor, there is now a dashboard link to set it directly on the
@@ -1045,7 +1190,8 @@ m_ResolvedPackages:
     which was assigned as a callback to the Google Billing module, causing a lack
     of purchase failure callbacks, and logging `\"No such proxy method:\"`. Also
     fixed this for `BillingClientStateListener.onBillingServiceDisconnected`, `BillingClientStateListener.onBillingSetupFinished`
-    and `SkuDetailsResponseListener.onSkuDetailsResponse`."}'
+    and `SkuDetailsResponseListener.onSkuDetailsResponse`.","gameService":{"groupName":"Monetize","groupIndex":4,"configurePath":"Project/Services/In-App
+    Purchasing","genericDashboardUrl":"https://dashboard.unity3d.com/","projectDashboardUrl":"https://dashboard.unity3d.com/organizations/{0}/projects/{1}/analytics/v2/dashboards/revenue","projectDashboardUrlType":"OrganizationKeyAndProjectGuid"},"supportedPlatforms":["Android","iOS"]}'
   assetStore:
     productId: 
 - packageId: com.unity.test-framework@1.3.9
@@ -1466,7 +1612,7 @@ m_ResolvedPackages:
     name: 
     email: 
     url: 
-  category: XR
+  category: 
   type: 
   description: This package includes the tracked pose driver for the legacy input
     system, the XR Bindings Seeding Tool and 3Dof Arm Model support for the Tracked
@@ -1477,6 +1623,30 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
+    - 1.0.0
+    - 1.0.2
+    - 1.0.3
+    - 1.3.1
+    - 1.3.2
+    - 1.3.4
+    - 1.3.5
+    - 1.3.6
+    - 1.3.7
+    - 1.3.8
+    - 1.3.11
+    - 2.0.1
+    - 2.0.2
+    - 2.0.4
+    - 2.0.6
+    - 2.0.8
+    - 2.1.1
+    - 2.1.2
+    - 2.1.3
+    - 2.1.4
+    - 2.1.6
+    - 2.1.7
+    - 2.1.8
+    - 2.1.9
     - 2.1.10
     compatible:
     - 2.1.10
@@ -1514,9 +1684,9 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   entitlements:
-    licensingModel: 0
+    licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 0
+  datePublishedTicks: 637958908030000000
   documentationUrl: 
   hasRepository: 1
   repository:
@@ -3881,7 +4051,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: assets
+  type: 
   description: 'This package defines common components used by multiple Game Service
     packages.
 
@@ -3919,25 +4089,27 @@ m_ResolvedPackages:
     - 1.12.2
     - 1.12.4
     - 1.12.5
+    - 1.13.0
     compatible:
     - 1.12.2
     - 1.12.4
     - 1.12.5
+    - 1.13.0
     recommended: 1.12.5
     deprecated: []
   dependencies:
-  - name: com.unity.modules.unitywebrequest
+  - name: com.unity.modules.androidjni
     version: 1.0.0
   - name: com.unity.nuget.newtonsoft-json
     version: 3.2.1
-  - name: com.unity.modules.androidjni
+  - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   resolvedDependencies:
-  - name: com.unity.modules.unitywebrequest
+  - name: com.unity.modules.androidjni
     version: 1.0.0
   - name: com.unity.nuget.newtonsoft-json
     version: 3.2.1
-  - name: com.unity.modules.androidjni
+  - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   keywords: []
   registry:
@@ -3989,7 +4161,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: 
   description: The Unity Analytics package automatically collects core events and
     user properties when someone uses your game or application, and enables you to
     track specific in-game actions your user performs by defining custom events.
@@ -4052,11 +4224,11 @@ m_ResolvedPackages:
     version: 1.0.0
   - name: com.unity.services.core
     version: 1.12.2
-  - name: com.unity.modules.unitywebrequest
+  - name: com.unity.modules.androidjni
     version: 1.0.0
   - name: com.unity.nuget.newtonsoft-json
     version: 3.2.1
-  - name: com.unity.modules.androidjni
+  - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   keywords: []
   registry:
@@ -4090,19 +4262,18 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"gameService":{"genericDashboardUrl":"https://dashboard.unity3d.com/analytics","projectDashboardUrl":"https://dashboard.unity3d.com/organizations/{0}/projects/{1}/analytics/events","projectDashboardUrlType":"OrganizationKeyAndProjectGuid","configurePath":"Project/Services/Analytics"},"supportedPlatforms":["Android","iOS","Linux","Mac","PC","Windows
-    8.1 Universal","Windows 10 Universal","WebGL"],"changelog":"### Added\n\n* CustomData
-    method now supports IDictionary<string,object>, IList<object> and Enum parameters\n\n###
-    Changed\n\n* Events are now serialised immediately when recorded rather than
-    as part of the upload process. This should alleviate any hitches that might have
-    been experienced during upload (every 60 seconds)\n* Updated `com.unity.services.core`
-    dependency to 1.8.1\n\n### Fixed\n\n* Custom user ID can now be changed at runtime
-    (by updating `UnityServices.ExternalUserId`)\n* Recording a single event that
-    is too big to upload (over 4MB) no longer prevents any further events from being
-    uploaded (event is immediately discarded with a warning)\n* Session ID is now
-    refreshed when application is paused for over 5 minutes (when Run In Background
-    is false)\n\n### Deprecated\n\n* The `RecordEvent(Event event)` API is no longer
-    supported and will be removed in a future version"}'
+  upmReserved: '{"changelog":"### Added\n\n* CustomData method now supports IDictionary<string,object>,
+    IList<object> and Enum parameters\n\n### Changed\n\n* Events are now serialised
+    immediately when recorded rather than as part of the upload process. This should
+    alleviate any hitches that might have been experienced during upload (every 60
+    seconds)\n* Updated `com.unity.services.core` dependency to 1.8.1\n\n### Fixed\n\n*
+    Custom user ID can now be changed at runtime (by updating `UnityServices.ExternalUserId`)\n*
+    Recording a single event that is too big to upload (over 4MB) no longer prevents
+    any further events from being uploaded (event is immediately discarded with a
+    warning)\n* Session ID is now refreshed when application is paused for over 5
+    minutes (when Run In Background is false)\n\n### Deprecated\n\n* The `RecordEvent(Event
+    event)` API is no longer supported and will be removed in a future version","gameService":{"configurePath":"Project/Services/Analytics","genericDashboardUrl":"https://dashboard.unity3d.com/analytics","projectDashboardUrl":"https://dashboard.unity3d.com/organizations/{0}/projects/{1}/analytics/events","projectDashboardUrlType":"OrganizationKeyAndProjectGuid"},"supportedPlatforms":["Android","iOS","Linux","Mac","PC","Windows
+    8.1 Universal","Windows 10 Universal","WebGL"]}'
   assetStore:
     productId: 
 - packageId: com.unity.nuget.newtonsoft-json@3.2.1
@@ -4119,7 +4290,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: library
+  type: 
   description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
     synced to version 13.0.2.
 
