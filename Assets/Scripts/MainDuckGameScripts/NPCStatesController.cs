@@ -6,10 +6,12 @@ public class NPCStatesController : MonoBehaviour
     private List<INPCBehavior> behaviors;
     [SerializeField] private Dictionary<int, INPCBehavior> currentBehaviors = new Dictionary<int, INPCBehavior>();
     [SerializeField] private Animator animator;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private int redPoints, bluePoints;
 
     private void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
     private void Start()
@@ -76,26 +78,26 @@ public class NPCStatesController : MonoBehaviour
 
     }
 
-    private void AddBehavior(int behaviorNumber)
+    private void AddBehavior(int behaviorNumber, int colorPercent)
     {
         Debug.Log(behaviors[behaviorNumber].ToString());
         if (currentBehaviors.TryAdd(behaviorNumber, behaviors[behaviorNumber]))
-            currentBehaviors[behaviorNumber].Enter();
+            currentBehaviors[behaviorNumber].Enter(spriteRenderer, colorPercent);
     }
 
     private void RemoveBehavior(int behaviorNumber)
     {
         if (currentBehaviors.ContainsKey(behaviorNumber))
         {
-            currentBehaviors[behaviorNumber].Exit();
+            currentBehaviors[behaviorNumber].Exit(spriteRenderer);
             currentBehaviors.Remove(behaviorNumber);
         }
     }
 
     //Методы перехода в определённое состояние
 
-    public void AddBlueState() => AddBehavior(1);
-    public void AddRedState() => AddBehavior(0);
+    public void AddBlueState() => AddBehavior(1, bluePoints);
+    public void AddRedState() => AddBehavior(0, redPoints);
     public void RemoveBlueState() => RemoveBehavior(1);
 
     public void RemoveRedState() => RemoveBehavior(0);

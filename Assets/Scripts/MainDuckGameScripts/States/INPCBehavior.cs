@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface INPCBehavior 
 {
-    void Enter();
-    void Exit();
+    void Enter(SpriteRenderer spriteRenderer, int colorPercent);
+    void Exit(SpriteRenderer spriteRenderer);
     void Update();
 }
