@@ -94,7 +94,6 @@ public class NPCStatesController : MonoBehaviour
         }
     }
 
-    //Методы перехода в определённое состояние
 
     public void AddBlueState() => AddBehavior(1, bluePoints);
     public void AddRedState() => AddBehavior(0, redPoints);

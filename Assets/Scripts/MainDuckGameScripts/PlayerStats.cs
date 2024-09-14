@@ -8,7 +8,7 @@ public class PlayerStats : MonoBehaviour
     public int karmaPoints;
     public int mindPoints;
 
-    [SerializeField] private TMP_Text statsText;//временно здесь, потом в другой класс, отвечающий за ui
+    [SerializeField] private TMP_Text statsText;//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ ui
 
     public float interactRadius;
 
@@ -18,8 +18,13 @@ public class PlayerStats : MonoBehaviour
         ChangeStatsText();
     }
 
-    private void ChangeStatsText()//временно здесь, потом в другой класс, отвечающий за ui
+    private void ChangeStatsText()//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ ui
     {
-        statsText.text = "карма " + karmaPoints + "\n здравомыслие " + mindPoints;
+        statsText.text = "karma " + karmaPoints + "\n mind " + mindPoints;
+    }
+
+    private void Update()
+    {
+        ChangeStatsText();
     }
 }

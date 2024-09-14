@@ -321,8 +321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b5958940eece84d931e8a0aafad075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  animator: {fileID: 1430495067}
+  spriteRenderer: {fileID: 1430495065}
 --- !u!212 &1430495065
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   karmaPoints: 80
-  mindPoints: 40
+  mindPoints: 80
   statsText: {fileID: 1996287808}
   interactRadius: 5
 --- !u!58 &1695521446
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b8f2237a45699409f00cf797de3b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 10
 --- !u!1 &1996287806
 GameObject:
   m_ObjectHideFlags: 0
