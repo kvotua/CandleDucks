@@ -7,7 +7,9 @@ public class NPCStatesController : MonoBehaviour
     [SerializeField] private Dictionary<int, INPCBehavior> currentBehaviors = new Dictionary<int, INPCBehavior>();
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Collider2D playerCollider;
     private int redPoints, bluePoints;
+    private float playerDistance, playerRadius;
 
     private void Awake()
     {
@@ -25,22 +27,30 @@ public class NPCStatesController : MonoBehaviour
         {
             foreach (var behavior in currentBehaviors)
             {
-                behavior.Value.Update();
+                behavior.Value.Update(playerDistance/playerRadius);
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "player")
+        if (collision== playerCollider)
         {
             animator.SetBool("IsActive", true);
             PlayerContact(collision.GetComponent<PlayerStats>());
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision == playerCollider)
+        {
+            playerDistance = Vector2.Distance(gameObject.transform.position, collision.transform.position);
+        }
+    }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "player")
+        if (other== playerCollider)
         {
             animator.SetBool("IsActive", false);
             RemoveBlueState();
@@ -67,6 +77,7 @@ public class NPCStatesController : MonoBehaviour
             {
                 AddBlueState();
             }
+        playerRadius = playerStats.interactRadius;
     }
     private void InitBehaviors()
     {
@@ -78,26 +89,26 @@ public class NPCStatesController : MonoBehaviour
 
     }
 
-    private void AddBehavior(int behaviorNumber, int colorPercent)
+    private void AddBehavior(int behaviorNumber, int colorPercent, bool isOneState)
     {
         Debug.Log(behaviors[behaviorNumber].ToString());
         if (currentBehaviors.TryAdd(behaviorNumber, behaviors[behaviorNumber]))
-            currentBehaviors[behaviorNumber].Enter(spriteRenderer, colorPercent);
+            currentBehaviors[behaviorNumber].Enter(spriteRenderer, colorPercent, isOneState);
     }
 
     private void RemoveBehavior(int behaviorNumber)
     {
         if (currentBehaviors.ContainsKey(behaviorNumber))
         {
-            currentBehaviors[behaviorNumber].Exit(spriteRenderer);
+            currentBehaviors[behaviorNumber].Exit();
             currentBehaviors.Remove(behaviorNumber);
         }
     }
 
     //Методы перехода в определённое состояние
 
-    public void AddBlueState() => AddBehavior(1, bluePoints);
-    public void AddRedState() => AddBehavior(0, redPoints);
+    public void AddBlueState() => AddBehavior(1, bluePoints, redPoints == 0);
+    public void AddRedState() => AddBehavior(0, redPoints, bluePoints == 0);
     public void RemoveBlueState() => RemoveBehavior(1);
 
     public void RemoveRedState() => RemoveBehavior(0);
