@@ -14,7 +14,7 @@ public class PlayerStats : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<CircleCollider2D>().radius = interactRadius;
+       // GetComponent<CircleCollider2D>().radius = interactRadius;
         ChangeStatsText();
     }
 

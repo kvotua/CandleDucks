@@ -324,6 +324,9 @@ MonoBehaviour:
   animator: {fileID: 0}
   spriteRenderer: {fileID: 0}
   playerCollider: {fileID: 1695521446}
+  distanceToPlayer: 0
+  minPlayerRadius: 5
+  maxPlayerRadius: 2.5
 --- !u!212 &1430495065
 SpriteRenderer:
   m_ObjectHideFlags: 0

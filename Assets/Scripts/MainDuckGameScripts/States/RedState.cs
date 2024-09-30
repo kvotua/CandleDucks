@@ -32,11 +32,15 @@ public class RedState : INPCBehavior
 
     public void Update(float distance)
     {
-        float colorDifference = (float)maxColorPercent * (distanceDifference - distance);
+        //  float colorDifference = (float)maxColorPercent * (distanceDifference - distance);
+        float colorDifference =  (distanceDifference - distance);
+        if(colorDifference<-1)
+            colorDifference = -1;
         if (_isOneState)
             npcSprite.color -= new Color(0, colorDifference, colorDifference, 0);
         else
             npcSprite.color -= new Color(0, colorDifference, 0, 0);
         distanceDifference = distance;
+        Debug.Log("Red upd" + npcSprite.color);
     }
 }

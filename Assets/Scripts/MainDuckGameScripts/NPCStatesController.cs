@@ -9,12 +9,13 @@ public class NPCStatesController : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Collider2D playerCollider;
     private int redPoints, bluePoints;
-    private float playerDistance, playerRadius;
+    [SerializeField] private float distanceToPlayer, minPlayerRadius/*для 0*/, maxPlayerRadius/*для 1*/;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        gameObject.GetComponent<CircleCollider2D>().radius= minPlayerRadius;
     }
     private void Start()
     {
@@ -27,7 +28,7 @@ public class NPCStatesController : MonoBehaviour
         {
             foreach (var behavior in currentBehaviors)
             {
-                behavior.Value.Update(playerDistance/playerRadius);
+                behavior.Value.Update(distanceToPlayer/(minPlayerRadius- maxPlayerRadius));
             }
         }
     }
@@ -45,7 +46,7 @@ public class NPCStatesController : MonoBehaviour
     {
         if (collision == playerCollider)
         {
-            playerDistance = Vector2.Distance(gameObject.transform.position, collision.transform.position);
+            distanceToPlayer = Vector2.Distance(gameObject.transform.position, collision.transform.position);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -77,7 +78,7 @@ public class NPCStatesController : MonoBehaviour
             {
                 AddBlueState();
             }
-        playerRadius = playerStats.interactRadius;
+        minPlayerRadius = playerStats.interactRadius;
     }
     private void InitBehaviors()
     {
