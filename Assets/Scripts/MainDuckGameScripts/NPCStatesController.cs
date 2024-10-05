@@ -13,9 +13,7 @@ public class NPCStatesController : MonoBehaviour
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
-        gameObject.GetComponent<CircleCollider2D>().radius= minPlayerRadius;
+        gameObject.GetComponent<CircleCollider2D>().radius = minPlayerRadius;
     }
     private void Start()
     {
@@ -28,14 +26,25 @@ public class NPCStatesController : MonoBehaviour
         {
             foreach (var behavior in currentBehaviors)
             {
-                behavior.Value.Update(distanceToPlayer/(minPlayerRadius- maxPlayerRadius));
+                behavior.Value.Update(distanceToPlayer, maxPlayerRadius, minPlayerRadius);
             }
         }
+
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, minPlayerRadius);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, maxPlayerRadius);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision== playerCollider)
+        if (collision == playerCollider)
         {
             animator.SetBool("IsActive", true);
             PlayerContact(collision.GetComponent<PlayerStats>());
@@ -51,7 +60,7 @@ public class NPCStatesController : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other== playerCollider)
+        if (other == playerCollider)
         {
             animator.SetBool("IsActive", false);
             RemoveBlueState();
@@ -60,24 +69,24 @@ public class NPCStatesController : MonoBehaviour
     }
     public void PlayerContact(PlayerStats playerStats)
     {
-            if (playerStats.karmaPoints < 50)
-                redPoints = 100 - playerStats.karmaPoints;
-            else
-                redPoints = 0;
+        if (playerStats.karmaPoints < 50)
+            redPoints = 100 - playerStats.karmaPoints;
+        else
+            redPoints = 0;
 
-            if (playerStats.mindPoints < 50)
-                bluePoints = 100 - playerStats.mindPoints;
-            else
-                bluePoints = 0;
+        if (playerStats.mindPoints < 50)
+            bluePoints = 100 - playerStats.mindPoints;
+        else
+            bluePoints = 0;
 
-            if (redPoints != 0)
-            {
-                AddRedState();
-            }
-            if (bluePoints != 0)
-            {
-                AddBlueState();
-            }
+        if (redPoints != 0)
+        {
+            AddRedState();
+        }
+        if (bluePoints != 0)
+        {
+            AddBlueState();
+        }
         minPlayerRadius = playerStats.interactRadius;
     }
     private void InitBehaviors()

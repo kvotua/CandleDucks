@@ -31,7 +31,7 @@ public class BlueState : INPCBehavior
         Debug.Log("BlueEnd");
     }
 
-    public void Update(float distance)
+    public void Update(float distance, float maxRadius, float minRadius)
     {
         Debug.Log(npcSprite.color);
         float colorDifference = maxColorPercent * (distanceDifference - distance);
