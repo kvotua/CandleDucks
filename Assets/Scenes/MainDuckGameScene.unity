@@ -519,8 +519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739894dd361ebef48a8608eb4031ac51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  karmaPoints: 40
-  mindPoints: 80
+  karmaPoints: 80
+  mindPoints: 40
   statsText: {fileID: 1996287808}
   interactRadius: 5
 --- !u!58 &1695521446

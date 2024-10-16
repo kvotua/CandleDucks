@@ -35,50 +35,39 @@ public class RedState : INPCBehavior
         Debug.Log("RedEnd");
     }
 
-    public void Update(float curdistance, float max, float min)
+    public void Update(float curdistance)
     {
-        //Debug.Log((float)maxColorPercent * (distanceDifference - distance) + "with mcp");
-        //Debug.Log((distanceDifference - distance) + "without mcp");
-        //Debug.Log((float)maxColorPercent + "mcp");
-        var distance = curdistance /(min - max) ;
+       
+        var distance = curdistance;
         float colorDifference = (distanceDifference - distance);
-        //Debug.Log(colorDifference + "colorDef");
-        //float colorDifference =  (distanceDifference - distance);
         if (colorDifference < -1)
             colorDifference = -1;
-        //colorDifference *= (float)maxColorPercent;
         if (_isOneState)
         {
-           // if (curdistance > max)
-         //       return;
             curColor -= new Color(0, colorDifference , colorDifference , 0);
+           if (curColor.g< 0)
+            {
 
-           if (curColor.g < 1 - maxColorPercent)
-                npcSprite.color = new Color(1, 1 - maxColorPercent, 1 - maxColorPercent, 1);
+            }
+              //  npcSprite.color = new Color(1, 1 - maxColorPercent, 1 - maxColorPercent, 1);
             else if (npcSprite.color.g != 0)
                 npcSprite.color -= new Color(0, colorDifference * maxColorPercent, colorDifference * maxColorPercent, 0);
             else
                 npcSprite.color -= new Color(0, colorDifference, colorDifference, 0);
 
-
-
-            /*curColor -= new Color(0, colorDifference, colorDifference, 0);
-            if (curColor.g < 1 - maxColorPercent)
-                npcSprite.color = new Color(1, 1-maxColorPercent, 1-maxColorPercent, 1);
-            else if(npcSprite.color.g != 0)
-                npcSprite.color -= new Color(0,colorDifference* maxColorPercent, colorDifference* maxColorPercent, 0);
-            else
-                npcSprite.color -= new Color(0, colorDifference, colorDifference, 0);*/
         }
         else
         {
             curColor -= new Color(0, colorDifference, 0, 0);
-            if (curColor.g < 1 - maxColorPercent)
-                npcSprite.color = new Color(1, 1 - maxColorPercent, 1, 1);
+            if (curColor.g < 0)
+            {
+
+            }
+              //  npcSprite.color = new Color(1, 1 - maxColorPercent, 1, 1);
             else if (npcSprite.color.g != 0)
-                npcSprite.color -= new Color(0, colorDifference * maxColorPercent, 0, 0);
+                npcSprite.color -= new Color(0, colorDifference/2 * maxColorPercent, 0, 0);
             else
-                npcSprite.color -= new Color(0, colorDifference, 0, 0);
+                npcSprite.color -= new Color(0, colorDifference/2, 0, 0);
         }
         distanceDifference = distance;
         Debug.Log("Red upd" + npcSprite.color);

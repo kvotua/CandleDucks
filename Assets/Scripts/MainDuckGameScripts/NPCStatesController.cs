@@ -26,7 +26,7 @@ public class NPCStatesController : MonoBehaviour
         {
             foreach (var behavior in currentBehaviors)
             {
-                behavior.Value.Update(distanceToPlayer, maxPlayerRadius, minPlayerRadius);
+                behavior.Value.Update(distanceToPlayer/ (minPlayerRadius- maxPlayerRadius)); 
             }
         }
 
